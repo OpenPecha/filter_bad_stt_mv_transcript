@@ -1,4 +1,4 @@
-from project_name.example import add_one
+from filter_bad_stt_mv_transcript.example import add_one
 
 
 def test_add_one():
