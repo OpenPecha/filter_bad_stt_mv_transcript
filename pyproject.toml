@@ -19,7 +19,7 @@ classifiers = [
 dependencies = [
   "botok >= 0.8.1",
   "bo_text_analyzer@git+https://github.com/OpenPecha/bo_text_analyzer.git@main",
-  "pandas >= 2.1.4"
+  "pandas"
 
 ]
 
