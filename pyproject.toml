@@ -10,7 +10,7 @@ authors = [
 ]
 description = "A small example package"
 readme = "README.md"
-requires-python = "==3.9.1"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -18,7 +18,8 @@ classifiers = [
 ]
 dependencies = [
   "botok >= 0.8.1",
-  { git = "https://github.com/OpenPecha/bo_text_analyzer.git", branch = "main" }
+  "bo_text_analyzer@git+https://github.com/OpenPecha/bo_text_analyzer.git@main"
+
 ]
 
 [project.optional-dependencies]
