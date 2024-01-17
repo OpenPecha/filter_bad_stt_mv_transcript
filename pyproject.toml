@@ -18,6 +18,7 @@ classifiers = [
 ]
 dependencies = [
   "botok >= 0.8.1",
+  "python >= 3.9.1"
   { git = "https://github.com/OpenPecha/bo_text_analyzer.git", branch = "main" }
 ]
 
