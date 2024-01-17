@@ -18,7 +18,7 @@ classifiers = [
 ]
 dependencies = [
   "botok >= 0.8.1",
-   git-package = { git = "https://github.com/OpenPecha/bo_text_analyzer.git", branch = "main" }
+  { git = "https://github.com/OpenPecha/bo_text_analyzer.git", branch = "main" }
 ]
 
 [project.optional-dependencies]
@@ -27,7 +27,6 @@ dev = [
     "pytest-cov",
     "pre-commit",
 ]
-
 
 [project.urls]
 "Homepage" = "https://github.com/OpenPecha/openpecha-project-template"
