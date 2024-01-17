@@ -9,15 +9,18 @@ def read_tsv_file(file_path):
 def process_transcript(text, text_analyzer):
     tokens = text_analyzer.tokenize_text(text)
     non_word_count = text_analyzer.count_non_words(tokens)
+    non_bo_word_count = text_analyzer.count_non_bo_words(tokens)
     total_tokens = len(tokens)
-    return non_word_count, total_tokens
+    return non_word_count, non_bo_word_count, total_tokens
 
 
 def add_columns_to_df(df, text_analyzer):
-    df["non_word_count"], df["total_tokens"] = zip(
+    df["non_word_count"], df["non_bo_word_count"], df["total_tokens"] = zip(
         *df["uni"].apply(lambda text: process_transcript(text, text_analyzer))
     )
     df["non_word_percentage"] = (df["non_word_count"] / df["total_tokens"]) * 100
+    df["non_bo_word_percentage"] = (df["non_bo_word_count"] / df["total_tokens"]) * 100
+
     df.fillna(0, inplace=True)  # Replace NaN values with 0 in case of division by zero
     return df
 
