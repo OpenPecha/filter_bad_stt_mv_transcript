@@ -18,7 +18,6 @@ classifiers = [
 ]
 dependencies = [
   "botok >= 0.8.1",
-  "bo_text_analyzer >= 0.0.1"
 ]
 
 [project.optional-dependencies]
